@@ -1,0 +1,13 @@
+{
+    "coll": {
+        "key": "value",
+        "random": 1
+    },
+    "coll2": {
+        "key2": "value2",
+        random2: 2
+    },
+    "coll3": {
+        "key3": "pair"
+    }
+}

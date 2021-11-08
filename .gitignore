@@ -1,0 +1,34 @@
+# thorny scons
+src/.sconf_temp/
+src/*.log/
+src/.vscode/
+src/*.dblite/
+
+.sconf_temp/
+*.log/
+.vscode/
+*.dblite/
+
+
+
+# compiled files
+*.o
+*.a
+*.so
+*.obj
+*.lib
+*.exe
+
+src/*.o
+src/*.a
+src/*.so
+src/*.obj
+src/*.lib
+src/*.exe
+
+src/bin/*.o
+src/bin/*.a
+src/bin/*.so
+src/bin/*.obj
+src/bin/*.lib
+src/bin/*.exe

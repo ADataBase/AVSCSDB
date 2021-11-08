@@ -1,0 +1,28 @@
+env = Environment()
+conf = Configure(env)
+
+# if not conf.CheckCXXHeader("boost/any.hpp") or not conf.CheckCXXHeader("boost/property_tree/ptree.hpp") or not conf.CheckCXXHeader("boost/property_tree/json_parser.hpp"):
+#     print("boost library must be installed")
+#     exit(1)
+
+env = conf.Finish()
+
+env.Append(CPPFLAGS=["-Wall", "-g", "-fdiagnostics-color", "-static-libstdc++", "-std=c++17"])
+
+if ARGUMENTS.get("FailTestProgram", 0):
+    print("Fail Test")
+    env.Program("./bin/Test.exe", "Test.cpp")
+elif ARGUMENTS.get("SampleProgram", 0):
+    print("Sample")
+    env.Program("./bin/Sample.exe", "Sample.cpp")
+elif ARGUMENTS.get("ObjectLib", 0):
+    print("Object Library")
+    env.Object("./bin/Lib.o", "ObjectLib.cpp")
+elif ARGUMENTS.get("SanityCheck", 0):
+    print("Sanity check")
+    env.Program("./bin/sanity", "Sanity.cpp")
+else:
+    if ARGUMENTS.get("CleanCWD", 0):
+        print("Cleaning Files")
+    else:
+        print("No job to do!")
