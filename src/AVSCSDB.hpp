@@ -1,6 +1,8 @@
 #include <iostream>
 #include <map>
 #include <string>
+#include <exception>
+#include <boost::any.hpp>
 
 
 #ifndef __cplusplus
@@ -17,13 +19,25 @@ namespace MXPSQL::AVSCSDB{
     using Dictionary = std::map<std::string, T>;
 
     class AVSCSDBCollection{
-
+	private:
+	Dictionary<boost::any> kvp;
 
     };
 
     class AVSCSDB{
         private:
         Dictionary<AVSCSDBCollection> kcoll;
+
+	public bool dump(){
+		
+		try{
+			return true;	
+		}
+		catch(std::exception){
+			return false;
+		}
+	}
+	
     };
 }
 
