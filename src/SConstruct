@@ -7,7 +7,7 @@ conf = Configure(env)
 
 env = conf.Finish()
 
-env.Append(CPPFLAGS=["-Wall", "-g", "-fdiagnostics-color", "-static-libstdc++", "-std=c++17"])
+env.Append(CPPFLAGS=["-Wall", "-g", "-fdiagnostics-color", "-static-libstdc++", "-std=c++17", "-lsqlite3", "-ldl", "-lpthread"])
 
 if ARGUMENTS.get("FailTestProgram", 0):
     print("Fail Test")

@@ -1,0 +1,6 @@
+[submodule "extern/unqlite"]
+	path = extern/unqlite
+	url = https://github.com/symisc/unqlite
+[submodule "extern/vedis"]
+	path = extern/vedis
+	url = https://github.com/symisc/vedis

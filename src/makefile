@@ -1,6 +1,6 @@
 # makefile for scons and stuff
 
-.PHONY: sconsfailtest sconslib sconsample test .PHONY all
+.PHONY: sconsfailtest sconslib sconsample test sample .PHONY all
 
 all: scons
 
@@ -34,3 +34,5 @@ sconsfailtest:
 	scons $(SCONSFLAG) -Q FailTestProgram=0
 
 test: sconsfailtest
+
+sample: sconsample
