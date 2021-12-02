@@ -4,3 +4,9 @@
 [submodule "extern/vedis"]
 	path = extern/vedis
 	url = https://github.com/symisc/vedis
+[submodule "extern/scons"]
+	path = extern/scons
+	url = https://github.com/SCons/scons.git
+[submodule "extern/cppcodec"]
+	path = extern/cppcodec
+	url = https://github.com/tplgy/cppcodec.git
