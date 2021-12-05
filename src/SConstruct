@@ -7,7 +7,7 @@ conf = Configure(env)
 
 env = conf.Finish()
 
-env.Append(CPPFLAGS=["-Wall", "-g", "-fdiagnostics-color", "-static-libstdc++", "-std=c++17", "-lsqlite3", "-ldl", "-lpthread"])
+env.Append(CPPFLAGS=["-Wall", "-g", "-fdiagnostics-color", "-static-libstdc++", "-std=c++17"])
 
 if ARGUMENTS.get("FailTestProgram", 0):
     print("Fail Test")
@@ -15,9 +15,6 @@ if ARGUMENTS.get("FailTestProgram", 0):
 elif ARGUMENTS.get("SampleProgram", 0):
     print("Sample")
     env.Program("./bin/Sample.exe", "Sample.cpp")
-elif ARGUMENTS.get("ObjectLib", 0):
-    print("Object Library")
-    env.Object("./bin/Lib.o", "ObjectLib.cpp")
 elif ARGUMENTS.get("SanityCheck", 0):
     print("Sanity check")
     env.Program("./bin/sanity", "Sanity.cpp")
