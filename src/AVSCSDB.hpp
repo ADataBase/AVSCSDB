@@ -356,7 +356,8 @@ namespace MXPSQL::AVSCSDB{
 }
 // file format:
 // Uses ISO image, el torito, stored inside of it, library will not be developed now, should be based of picklingtools
-// Stored in pickle file, stored as key value pair inside the ISO image, not developed now too
+// Database stored in memory and then parsed from/to HOCON superset, result is a string or a map.
+// The string is then stored in pickle file, stored as key value pair inside the ISO image, not developed now too
 // OpenSSL or GnuTLS used foe generating the random filename and making the key file
 // Uses XML for indexing the key value, location of the key, expat is used for parsing the XML
 // The ISO image containing the files are deflated with zlib, the files are stored in the ISO image
