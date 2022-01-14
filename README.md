@@ -1,6 +1,6 @@
 # AVSCSDB
 
-Start from scratch again!
+Start from scratch again! Archived! Visit [this link](https://github.com/MOALib/ISM_AVSCSDB) for the successor.
 
 <hr>
 
